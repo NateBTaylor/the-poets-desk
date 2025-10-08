@@ -11,42 +11,10 @@
     <h1>The Poet's Desk</h1>
     <h3>Scroll down to the editor</h3>
   <div class="controls">
+
     <div>
-      <label>Background Color</label>
+      <label>Background</label>
       <input type="color" id="bgColor" value="#ffffff">
-    </div>
-
-    <div>
-      <label>Text Color</label>
-      <input type="color" id="textColor" value="#000000">
-    </div>
-
-    <div>
-      <label>Font</label>
-      <select id="fontSelect">
-        <option value="'Playfair Display', serif">Playfair Display</option>
-        <option value="'Inter', sans-serif">Inter</option>
-        <option value="'Lora', serif">Lora</option>
-        <option value="'Poppins', sans-serif">Poppins</option>
-        <option value="'EB Garamond', serif">EB Garamond</option>
-        <option value="'Merriweather', serif">Merriweather</option>
-        <option value="'Roboto', sans-serif">Roboto</option>
-        <option value="'Open Sans', sans-serif">Open Sans</option>
-        <option value="'Oswald', sans-serif">Oswald</option>
-        <option value="'Raleway', sans-serif">Raleway</option>
-        <option value="'Cinzel', serif">Cinzel</option>
-        <option value="'Pacifico', cursive">Pacifico</option>
-        <option value="'Dancing Script', cursive">Dancing Script</option>
-        <option value="'Roboto Slab', serif">Roboto Slab</option>
-        <option value="'Source Serif Pro', serif">Source Serif Pro</option>
-        <option value="'Crimson Pro', serif">Crimson Pro</option>
-      </select>
-    </div>
-
-    <div class="font-size-controls">
-      <label>Font Size</label>
-      <button id="decreaseFont">-</button>
-      <button id="increaseFont">+</button>
     </div>
 
     <div class="align-controls">
@@ -56,11 +24,7 @@
         <button onclick="applyAlignment('right')">Right</button>
     </div>
 
-    <div class="margin-control">
-        <label for="margin">Margin</label>
-        <input type="range" id="margin" min="0" max="200" value="50">
-        <h3 id="marginValue">50px</h3>
-    </div>
+    
 
     <div>
         <label for="postSize">Post Size:</label>
@@ -72,9 +36,50 @@
         </select>
     </div>
 
-    <label for="lineHeight">Line Height:</label>
-    <input id="lineHeight" type="range" min="0.5" max="3" step="0.05" value="1.3" />
-    <span id="lineHeightValue">1.3</span>
+    <div class="margin-control">
+        <label for="margin">Margin</label>
+        <input type="range" id="margin" min="0" max="200" value="50">
+        <h3 id="marginValue">50px</h3>
+    </div>
+
+    <div>
+        <label for="lineHeight">Line Height:</label>
+        <input id="lineHeight" type="range" min="0.5" max="3" step="0.05" value="1.3" />
+        <span id="lineHeightValue">1.3</span>
+    </div>
+
+    <div>
+        <label>Text Color</label>
+        <input type="color" id="textColor" value="#000000">
+      </div>
+  
+      <div>
+        <label>Font</label>
+        <select id="fontSelect">
+          <option value="'Playfair Display', serif">Playfair Display</option>
+          <option value="'Inter', sans-serif">Inter</option>
+          <option value="'Lora', serif">Lora</option>
+          <option value="'Poppins', sans-serif">Poppins</option>
+          <option value="'EB Garamond', serif">EB Garamond</option>
+          <option value="'Merriweather', serif">Merriweather</option>
+          <option value="'Roboto', sans-serif">Roboto</option>
+          <option value="'Open Sans', sans-serif">Open Sans</option>
+          <option value="'Oswald', sans-serif">Oswald</option>
+          <option value="'Raleway', sans-serif">Raleway</option>
+          <option value="'Cinzel', serif">Cinzel</option>
+          <option value="'Pacifico', cursive">Pacifico</option>
+          <option value="'Dancing Script', cursive">Dancing Script</option>
+          <option value="'Roboto Slab', serif">Roboto Slab</option>
+          <option value="'Source Serif Pro', serif">Source Serif Pro</option>
+          <option value="'Crimson Pro', serif">Crimson Pro</option>
+        </select>
+      </div>
+  
+      <div class="font-size-controls">
+        <label>Font Size</label>
+        <button id="decreaseFont">-</button>
+        <button id="increaseFont">+</button>
+      </div>
 
   </div>
 
