@@ -36,113 +36,123 @@ h3 {
   
 
 .controls {
-  width: 100%;
-  max-width: 500px;
-  box-sizing: border-box;
-  padding: 1.5rem;
-  background: linear-gradient(to bottom, #f7f3eb, #ede3d1);
-  /* border: 1px solid #cbbd9f; */
-  border-radius: 6px 6px 0 0;
-  font-family: "EB Garamond", "Georgia", serif;
-  color: #3e2f23;
-  box-shadow:
-      inset 0 2px 4px rgba(255, 255, 255, 0.3),
-      inset 0 -2px 6px rgba(0, 0, 0, 0.2),
-      0 3px 8px rgba(0, 0, 0, 0.3);
-}
-
-.controls label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: #3e2f23;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-
-.controls div {
-  margin-bottom: 1.2rem;
-}
-
-.controls input[type="color"],
-.controls select,
-.controls input[type="range"],
-.controls button {
-  width: 100%;
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 0.9rem;
-  padding: 0.5rem 0.7rem;
-  border: 1px solid #c7bca4;
-  border-radius: 6px;
-  outline:none;
-  background: #fdfaf5;
-  color: #3e2f23;
-  transition: all 0.25s ease;
-  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.5),
-              inset 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.controls input[type="color"] {
-  height: 2.4rem;
-  padding: 0.2rem;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.controls input[type="range"] {
-  appearance: none;
-  height: 8px;
-  background: #b49b77;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.controls input[type="range"]::-webkit-slider-thumb {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #7a3e2b;
-  cursor: pointer;
-  transition: 0.2s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-.controls input[type="range"]::-webkit-slider-thumb:hover {
-  background: #5c2d1f;
-}
-
-.controls button {
-  width: auto;
-  background: linear-gradient(to bottom, #c3a47a, #a98658);
-  color: #fffaf2;
-  border: none;
-  padding: 0.4rem 0.9rem;
-  margin-right: 0.4rem;
-  border-radius: 10px;
-  border-top: 3px ridge #81581b;
-  box-shadow:
-    inset 0 2px 3px rgba(255, 255, 255, 0.2),
-    0 2px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-}
-.controls button:hover {
-  background: linear-gradient(to bottom, #b59266, #946c3f);
-  transform: translateY(-1px);
-}
-
-.controls h3,
-.controls span {
-  font-size: 0.85rem;
-  color: #4d3b2b;
-  margin-top: 0.4rem;
-  font-weight: normal;
-}
-
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    background: linear-gradient(to bottom, #f7f3eb, #ede3d1);
+    border-radius: 6px 6px 0 0;
+    font-family: "EB Garamond", "Georgia", serif;
+    color: #3e2f23;
+    box-shadow:
+        inset 0 2px 4px rgba(255, 255, 255, 0.3),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.2),
+        0 3px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Each control group */
+  .controls div {
+    flex: 1 1 48%; /* Two per row */
+    min-width: 180px; /* prevent too-small items */
+  }
+  
+  /* Full width controls (like sliders or post size) */
+  .controls div.full-width {
+    flex: 1 1 100%;
+  }
+  
+  .controls label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #3e2f23;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+  
+  .controls input[type="color"],
+  .controls select,
+  .controls input[type="range"],
+  .controls button {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #c7bca4;
+    border-radius: 6px;
+    outline: none;
+    background: #fdfaf5;
+    color: #3e2f23;
+    transition: all 0.25s ease;
+    box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.5),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .controls input[type="color"] {
+    height: 2.4rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .controls input[type="range"] {
+    appearance: none;
+    height: 8px;
+    background: #b49b77;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .controls input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #7a3e2b;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .controls input[type="range"]::-webkit-slider-thumb:hover {
+    background: #5c2d1f;
+  }
+  
+  .controls button {
+    width: auto;
+    background: linear-gradient(to bottom, #c3a47a, #a98658);
+    color: #fffaf2;
+    border: none;
+    padding: 0.4rem 0.9rem;
+    margin-right: 0.4rem;
+    border-radius: 10px;
+    border-top: 3px ridge #81581b;
+    box-shadow:
+      inset 0 2px 3px rgba(255, 255, 255, 0.2),
+      0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  .controls button:hover {
+    background: linear-gradient(to bottom, #b59266, #946c3f);
+    transform: translateY(-1px);
+  }
+  
+  .controls h3,
+  .controls span {
+    font-size: 0.85rem;
+    color: #4d3b2b;
+    margin-top: 0.4rem;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  
   
   #postCanvas {
     background: #fffdf9;
@@ -257,10 +267,54 @@ h3 {
     cursor:pointer;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     #supportBtn {
         margin-bottom:0;
         border-radius:0;
     }
     
+  }
+
+  @media (max-width: 500px) {
+    .controls {
+      display: flex;
+      flex-wrap: nowrap; /* prevent stacking */
+      overflow-x: auto;   /* enable horizontal scroll if needed */
+      gap: 0.8rem;
+    }
+  
+    .controls {
+        scrollbar-width: thin;        /* Firefox */
+        scrollbar-color: #b49b77 #f7f3eb; /* thumb & track */
+      }
+      
+      .controls::-webkit-scrollbar {
+        height: 6px;
+      }
+      
+      .controls::-webkit-scrollbar-thumb {
+        background: #b49b77;
+        border-radius: 3px;
+      }
+      
+      .controls::-webkit-scrollbar-track {
+        background: #f7f3eb;
+      }
+
+    .controls div {
+      flex: 0 0 auto; /* keep natural width */
+      min-width: 140px; /* prevent shrinking too small */
+    }
+  
+    .controls input[type="color"],
+    .controls select,
+    .controls input[type="range"],
+    .controls button {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.6rem;
+    }
+  
+    .controls button {
+      padding: 0.35rem 0.7rem;
+    }
   }
